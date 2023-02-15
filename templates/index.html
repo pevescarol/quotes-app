@@ -8,7 +8,7 @@
     </head>
     <body>
         <nav class="navbar bg-dark" data-bs-theme="dark">
-            <a class="btn btn-primary col-3 mx-auto" href="#">Agregar una cita</a>
+            <a class="btn btn-primary col-3 mx-auto" href="{{url_for('quotes')}}">Agregar una cita</a>
         </nav>
 
         <div class="container theme-showcase" role="main">
@@ -23,6 +23,15 @@
                 <h3 class="text-white fs-5 py-2">~ Into The Wild </h3>
             </div>
             
+            {% for r in result %}
+            <div class="bg-success rounded px-4">
+                <h2 class="text-white fs-3 py-3">"{{ r.quote }}"</h2>
+            </div>
+
+            <div class=" bg-warning rounded px-4 ">
+                <h3 class="text-white fs-5 py-2">~ {{ r.author }}</h3>
+            </div>
+            {% endfor %}
         </div> <!-- /container -->
 
         <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha1/dist/js/bootstrap.bundle.min.js" integrity="sha384-w76AqPfDkMBDXo30jS1Sgez6pr3x5MlQ1ZAGC+nuZB+EYdgRZgiwxhTBTkF7CXvN" crossorigin="anonymous"></script>
