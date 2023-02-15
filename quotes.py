@@ -1,9 +1,12 @@
+import os
 from flask import Flask, render_template, request, redirect, url_for
 from flask_sqlalchemy import SQLAlchemy
 
 app = Flask(__name__)
-app.config['SQLALCHEMY_DATABASE_URI']='postgresql+psycopg2://caro:Benito89@localhost/quotes2'
+app.config['SQLALCHEMY_DATABASE_URI']='postgresql+psycopg2://caro:Sd6zxSm3mly13QlSZKAxrF1B2HBtPuUf@dpg-cfmc9f4gqg469ktjhrlg-a.oregon-postgres.render.com/db_render_06f7'
 app.config['SQLALCHEMY_TRACK_MODIFICATIONS']=False
+
+# postgres://caro:Sd6zxSm3mly13QlSZKAxrF1B2HBtPuUf@dpg-cfmc9f4gqg469ktjhrlg-a.oregon-postgres.render.com/db_render_06f7
 
 db = SQLAlchemy(app)
 
